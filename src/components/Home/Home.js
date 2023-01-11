@@ -8,7 +8,7 @@ import './Home.css';
 export default function Home() {
   // add useState calls here for title, subtitle, font, align, and text
   const [title, setTitle] = useState('');
-  // const [subtitle, setSubtitle] = useState('');
+  const [subtitle, setSubtitle] = useState('');
   // const [font, setFont] = useState('');
   // const [align, setAlign] = useState('');
   // const [text, setText] = useState('');
@@ -16,8 +16,8 @@ export default function Home() {
   return (
     <main>
       {/* pass the state variables as props to the presentational components */}
-      <Preview />
-      <Editor setTitle={setTitle} />
+      <Preview title={title} />
+      <Editor setTitle={setTitle} setSubTitle />
     </main>
   );
 }
